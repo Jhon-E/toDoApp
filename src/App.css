@@ -9,7 +9,7 @@
 @media (width <= 600px) {
   .globalContainer {
     background-color: rgb(224, 224, 224);
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     display: flex;
     flex-direction: column;
