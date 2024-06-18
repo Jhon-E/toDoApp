@@ -6,9 +6,16 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+body {
+  background-image: url("/fondo.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (width > 700px) {
   .globalContainer {
-    background-color: rgb(224, 224, 224);
+    background-color: rgba(224, 224, 224, 0.15);
+    color: white;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -16,6 +23,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    backdrop-filter: blur(10px);
   }
 
   .header {
@@ -53,7 +61,7 @@
     width: 100%;
     height: 100%;
     padding: 10px;
-    box-shadow: 0px 0px 8px rgb(255, 255, 255);
+    /* box-shadow: 0px 0px 8px rgb(255, 255, 255); */
     outline: none;
     border: none;
     border-radius: 6px;
@@ -78,7 +86,7 @@
     width: 60%;
     overflow-y: scroll;
     background-color: rgb(228, 228, 228);
-    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
     border-radius: 10px;
     color: rgb(32, 32, 32);
     padding: 10px;
@@ -108,22 +116,16 @@
   }
 
   .task {
-    list-style: none;
-    padding: 0.5rem;
-    display: flex;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.208);
-    gap: 0.5rem;
-    border-radius: 5px;
-    height: 75px;
     background-color: rgb(240, 240, 240);
-    overflow: hidden;
-  }
-
-  .task {
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.208);
+    list-style: none;
     justify-self: start;
-    font-size: 1.2rem;
+    font-size: 1rem;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     display: flex;
     gap: 0.5rem;
     align-items: center;
@@ -205,7 +207,7 @@
 
 @media (width <= 700px) {
   .globalContainer {
-    background-color: rgb(224, 224, 224);
+    background-color: rgba(224, 224, 224, 0.15);
     height: 100dvh;
     width: 100vw;
     display: flex;
@@ -213,7 +215,9 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 1rem;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    color: white;
   }
 
   .header {
@@ -243,7 +247,6 @@
     width: 100%;
     height: 100%;
     padding: 10px;
-    box-shadow: 0px 0px 8px rgb(255, 255, 255);
     outline: none;
     border: none;
     border-radius: 6px 0 0 6px;
@@ -268,9 +271,10 @@
     height: 70%;
     width: 100%;
     overflow-y: scroll;
-    background-color: rgb(228, 228, 228);
-    border-radius: 10px;
+    background-color: rgba(228, 228, 228, 0.5);
     color: rgb(32, 32, 32);
+    padding: 1rem;
+    border-radius: 4px;
   }
 
   .listTasks {
@@ -339,7 +343,7 @@
   }
   .opc {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     list-style: none;
     width: 100%;
     text-transform: uppercase;
